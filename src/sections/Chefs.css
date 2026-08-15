@@ -1,0 +1,289 @@
+.chefs-section {
+  padding: var(--section-padding) 0;
+  background: var(--light-color);
+  overflow: hidden;
+}
+
+.chefs-heading {
+  max-width: 700px;
+  margin-bottom: 60px;
+
+  opacity: 0;
+  transform: translateY(40px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.chefs-visible .chefs-heading {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.chefs-heading h2 {
+  margin-bottom: 20px;
+
+  color: var(--text-color);
+
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.1;
+}
+
+.chefs-heading h2 span {
+  color: var(--secondary-color);
+}
+
+.chefs-heading p {
+  max-width: 550px;
+
+  color: #665d53;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   CHEF SLIDE
+========================================= */
+
+.chef-slide {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  min-height: 560px;
+
+  background: var(--dark-color);
+}
+
+
+/* image */
+.chef-image {
+  height: 560px;
+  overflow: hidden;
+}
+
+.chef-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.carousel-item.active .chef-image img {
+  animation: chefZoom 1s ease forwards;
+}
+
+@keyframes chefZoom {
+  from {
+    transform: scale(1.05);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+
+/* content */
+
+.chef-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 70px;
+  color: var(--text-light);
+}
+
+.chef-role {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.chef-content h3 {
+  margin-bottom: 20px;
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  font-weight: 500;
+}
+
+
+.chef-content p {
+  max-width: 450px;
+  margin-bottom: 30px;
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+}
+/* link */
+
+.chef-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  width: fit-content;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: var(--transition-normal);
+}
+
+/* .chef-link span {
+  font-size: 18px;
+
+  transition: transform var(--transition-normal);
+} */
+
+.chef-link:hover {
+  color: var(--primary-color);
+}
+
+.chef-link:hover span {
+  transform: translateX(6px);
+}
+
+
+
+
+.chef-control {
+  width: 55px;
+
+  top: auto;
+  bottom: 30px;
+
+  opacity: 1;
+}
+
+.carousel-control-prev.chef-control {
+  left: 50%;
+  transform: translateX(-60px);
+}
+
+.carousel-control-next.chef-control {
+  right: auto;
+  left: 50%;
+  transform: translateX(60px);
+}
+
+.chef-control .carousel-control-prev-icon,
+.chef-control .carousel-control-next-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* indicator */
+.chef-indicators {
+  position: absolute;
+
+  right: 70px;
+  bottom: 40px;
+
+  left: auto;
+
+  width: auto;
+
+  margin: 0;
+}
+
+.chef-indicators button {
+  width: 25px;
+  height: 2px;
+
+  margin: 0 4px;
+
+  background-color: rgba(255, 255, 255, 0.35);
+
+  border: 0;
+}
+
+.chef-indicators button.active {
+  background-color: var(--primary-color);
+}
+
+
+/* tablet */
+
+@media (max-width: 900px) {
+
+  .chef-slide {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+  }
+
+  .chef-image {
+    height: 450px;
+  }
+
+  .chef-content {
+    padding: 55px;
+    min-height: 400px;
+  }
+
+  .chef-control {
+    bottom: 20px;
+  }
+
+  .chef-indicators {
+    right: 40px;
+    bottom: 30px;
+  }
+}
+
+
+/* mobile */
+
+@media (max-width: 600px) {
+
+  .chefs-section {
+    padding: 75px 0;
+  }
+
+  .chefs-heading {
+    margin-bottom: 40px;
+  }
+
+  .chefs-heading h2 {
+    font-size: 2.5rem;
+  }
+
+  .chef-image {
+    height: 350px;
+  }
+
+  .chef-content {
+    padding: 40px 25px 90px;
+    min-height: 400px;
+  }
+
+  .chef-content h3 {
+    font-size: 2.2rem;
+  }
+
+  .chef-indicators {
+    right: 25px;
+    bottom: 25px;
+  }
+
+  .carousel-control-prev.chef-control {
+    left: auto;
+    right: 100px;
+    transform: none;
+  }
+
+  .carousel-control-next.chef-control {
+    left: auto;
+    right: 45px;
+    transform: none;
+  }
+}

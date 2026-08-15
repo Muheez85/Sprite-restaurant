@@ -1,0 +1,150 @@
+.contact-section {
+  padding: var(--section-padding) 0;
+  background: var(--light-color);
+  overflow: hidden;
+}
+
+.contact-content,
+.contact-form {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.contact-content {
+  transform: translateX(-40px);
+}
+
+.contact-form {
+  transform: translateX(40px);
+}
+
+.contact-visible .contact-content,
+.contact-visible .contact-form {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contact-content h2 {
+  margin-bottom: 25px;
+  color: var(--text-color);
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  line-height: 1.1;
+}
+
+.contact-content h2 span {
+  color: var(--secondary-color);
+}
+
+.contact-content > p {
+  max-width: 500px;
+  margin-bottom: 40px;
+  color: #665d53;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* Contact details */
+
+.contact-details {
+  display: grid;
+  gap: 25px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.contact-item > i {
+  margin-top: 3px;
+  color: var(--primary-color);
+  font-size: 20px;
+}
+
+.contact-item h3 {
+  margin-bottom: 5px;
+  color: var(--text-color);
+  font-size: 15px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: #665d53;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+
+/* Form */
+
+.contact-form {
+  padding: 40px;
+  background: var(--dark-color);
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.contact-form .form-control {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0;
+  background: transparent;
+  color: var(--text-light);
+  box-shadow: none;
+}
+
+.contact-form .form-control:focus {
+  border-color: var(--primary-color);
+  background: transparent;
+  color: var(--text-light);
+  box-shadow: none;
+}
+
+.contact-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+
+/* Button */
+
+.contact-btn {
+  padding: 14px 28px;
+  border: 1px solid var(--primary-color);
+  background: var(--primary-color);
+  color: var(--dark-color);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: transparent;
+  color: var(--primary-color);
+}
+
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 75px 0;
+  }
+
+  .contact-form {
+    padding: 25px 20px;
+  }
+}

@@ -1,0 +1,149 @@
+.footer {
+  padding: 70px 0 25px;
+  background: var(--dark-color);
+  color: var(--text-light);
+}
+
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-size: 2.3rem;
+  font-weight: 500;
+}
+
+.footer-logo:hover {
+  color: var(--primary-color);
+}
+
+.footer-brand > p {
+  max-width: 330px;
+  margin-bottom: 25px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+
+/* Socials */
+
+.footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--text-light);
+  transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+
+/* Headings */
+
+.footer h3 {
+  margin-bottom: 20px;
+  color: var(--text-light);
+
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+
+/* Links */
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+}
+
+.footer li {
+  margin-bottom: 12px;
+}
+
+.footer li a {
+  color: var(--text-muted);
+  font-size: 13px;
+  transition: 0.3s ease;
+}
+
+.footer li a:hover {
+  color: var(--primary-color);
+}
+
+
+/* Contact */
+
+.footer-contact p {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.footer-contact i {
+  margin-top: 3px;
+  color: var(--primary-color);
+}
+
+
+/* Bottom */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 55px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+}
+
+.footer-bottom a {
+  color: var(--text-muted);
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+.footer-bottom a:hover {
+  color: var(--primary-color);
+}
+
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 55px 0 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    margin-top: 40px;
+  }
+}
