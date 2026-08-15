@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import "./WhyChoose.css";
+import "./Whychoose.css";
 
 function WhyChoose() {
   const sectionRef = useRef(null);
